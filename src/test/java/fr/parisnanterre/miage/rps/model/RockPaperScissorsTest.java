@@ -110,23 +110,23 @@ public class RockPaperScissorsTest {
 
     @Test
     public void testWinTour(){
-        player3.resetIndexScore();
-        player2.resetIndexScore();
+        player3.resetScore();
+        player2.resetScore();
         assertEquals(rps.play(player1, player2), WIN);
     }
 
     @Test
     public void testLostTour(){
-        player3.resetIndexScore();
-        player2.resetIndexScore();
-        assertEquals(rps.play(player3, player2), WIN);
+        player3.resetScore();
+        player2.resetScore();
+        assertEquals(rps.play(player2, player1), LOST);
     }
 
     @Test
     public void testTieTour(){
-        player3.resetIndexScore();
-        player2.resetIndexScore();
-        assertEquals(rps.play(player1, player1), WIN);
+        player3.resetScore();
+        player2.resetScore();
+        assertEquals(rps.play(player1, player3), TIE);
     }
 
 }

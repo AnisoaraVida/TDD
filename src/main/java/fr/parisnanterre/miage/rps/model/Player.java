@@ -40,7 +40,7 @@ public class Player {
         this.score = score;
     }
 
-    public void resetIndexScore(){
+    public void resetScore(){
         setScore(0);
         currMouv=0;
     }
