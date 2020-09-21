@@ -42,7 +42,7 @@ public class RockPaperScissorsTest {
     @DataProvider(name = "winData")
     public Object[][] createWinData() {
         return new Object[][]{{ PAPER, ROCK},
-                {PAPER, PAPER},
+                {SCISSORS, PAPER},
                 {ROCK, SCISSORS}};
     }
 
@@ -55,8 +55,8 @@ public class RockPaperScissorsTest {
 
     @DataProvider(name = "tieData")
     public Object[][] createTieData() {
-        return new Object[][]{{PAPER, ROCK},
-                {ROCK, PAPER},
+        return new Object[][]{{ROCK, ROCK},
+                {PAPER, PAPER},
                 {SCISSORS, SCISSORS}};
     }
 
