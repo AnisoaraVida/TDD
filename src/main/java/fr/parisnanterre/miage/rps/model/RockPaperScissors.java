@@ -21,4 +21,31 @@ public class RockPaperScissors {
         return Result.LOST;
     }
 
+    Result play(Player p1, Player p2){
+        Result result;
+        for(int i=0; i<p1.getMouvements(); i++){
+            result= play(p1.getNexMove(), p2.getNexMove());
+            if(result==Result.TIE){
+                p1.setScore(p1.getScore()+1);
+                p2.setScore(p2.getScore()+1);
+            }
+            if(result==Result.WIN){
+                p1.setScore(p1.getScore()+1);
+            }
+            else{
+                p2.setScore(p2.getScore()+1);
+            }
+        }
+
+        if(p1.getScore() > p2.getScore()){
+            return Result.WIN;
+        }
+        else if(p1.getScore()==p2.getScore()){
+            return Result.TIE;
+        }
+        else{
+            return Result.LOST;
+        }
+    }
+
 }
